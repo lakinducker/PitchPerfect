@@ -35,13 +35,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         // Disable recordButton
         recordButton.enabled = false
-        // Show "record" label
-        recordingInProgress.hidden = false
+        // Change "tap to record" label to "recording"
+        recordingInProgress.text = "recording"
         // Show stopButton
         stopButton.hidden = false
         
         // Record voice
-        println("in recordAudio")
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
@@ -51,7 +50,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        println(filePath)
         
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
@@ -91,8 +89,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     
     @IBAction func stopRecord(sender: UIButton) {
-        // Hide "recording" label
-        recordingInProgress.hidden = true
+        // Change "recording" label to "tap to record"
+        recordingInProgress.text = "tap to record"
         // Make stopButton hidden
         stopButton.hidden = true
         // Stop recording

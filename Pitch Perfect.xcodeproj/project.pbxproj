@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A155A3E1A6FF0F300738CD4 /* RecordAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAudio.swift; sourceTree = "<group>"; };
+		2A155A3E1A6FF0F300738CD4 /* RecordAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordAudio.swift; path = ../RecordAudio.swift; sourceTree = "<group>"; };
 		2A7636B91A688FEA00E5D47F /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7636BD1A688FEA00E5D47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7636BE1A688FEA00E5D47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +65,6 @@
 		2A7636B01A688FEA00E5D47F = {
 			isa = PBXGroup;
 			children = (
-				2A155A3E1A6FF0F300738CD4 /* RecordAudio.swift */,
 				2A7636BB1A688FEA00E5D47F /* Pitch Perfect */,
 				2A7636D11A688FEA00E5D47F /* Pitch PerfectTests */,
 				2A7636BA1A688FEA00E5D47F /* Products */,
@@ -84,6 +83,7 @@
 		2A7636BB1A688FEA00E5D47F /* Pitch Perfect */ = {
 			isa = PBXGroup;
 			children = (
+				2A155A3E1A6FF0F300738CD4 /* RecordAudio.swift */,
 				2A7636BE1A688FEA00E5D47F /* AppDelegate.swift */,
 				2A7636C01A688FEA00E5D47F /* RecordSoundsViewController.swift */,
 				2A7636C21A688FEA00E5D47F /* Main.storyboard */,
