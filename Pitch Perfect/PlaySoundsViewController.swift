@@ -38,6 +38,7 @@ class PlaySoundsViewController: UIViewController {
     
     
     func enableAllButtons() {
+        // enable all buttons
         slowButton.enabled = true
         fastButton.enabled = true
         highButton.enabled = true
@@ -54,6 +55,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
+        // enable buttons
         enableAllButtons()
         // Play audio slowly...
         playAudio(0.5)
@@ -63,6 +65,7 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func playFastAudio(sender: UIButton) {
+        // enable buttons
         enableAllButtons()
         // Play audio quickly...
         playAudio(1.5)
@@ -72,6 +75,7 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func playHighAudio(sender: UIButton) {
+        // enable buttons
         enableAllButtons()
         // Play high pitch audio
         playAudioWithVariablePitch(1000)
@@ -81,6 +85,7 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func playLowAudio(sender: UIButton) {
+        // enable buttons
         enableAllButtons()
         // Play low pitch audio
         playAudioWithVariablePitch(-1000)
@@ -90,6 +95,7 @@ class PlaySoundsViewController: UIViewController {
     
     
     func playAudioWithVariablePitch(pitch: Float){
+        // stop all audio
         stopAllAudio()
         
         var audioPlayerNode = AVAudioPlayerNode()
@@ -110,7 +116,9 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func stopAudio(sender: UIButton) {
+        // enable all buttons
         enableAllButtons()
+        // stop all buttons
         stopAllAudio()
         // disable stopButton
         stopButton.enabled = false
