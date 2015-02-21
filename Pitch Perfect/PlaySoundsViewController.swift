@@ -11,11 +11,20 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
+    
+    @IBOutlet weak var slowButton: UIButton!
+    @IBOutlet weak var fastButton: UIButton!
+    @IBOutlet weak var highButton: UIButton!
+    @IBOutlet weak var lowButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    
     var audioPlayer:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
     
     var audioEngine:AVAudioEngine!
     var audioFile:AVAudioFile!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +37,15 @@ class PlaySoundsViewController: UIViewController {
     }
     
     
+    func enableAllButtons() {
+        slowButton.enabled = true
+        fastButton.enabled = true
+        highButton.enabled = true
+        lowButton.enabled = true
+        stopButton.enabled = true
+    }
+    
+    
     func playAudio(audioRate: Float) {
         stopAllAudio()
         audioPlayer.rate = audioRate
@@ -36,26 +54,38 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
+        enableAllButtons()
         // Play audio slowly...
         playAudio(0.5)
+        // disable slowButton
+        slowButton.enabled = false
     }
     
     
     @IBAction func playFastAudio(sender: UIButton) {
+        enableAllButtons()
         // Play audio quickly...
         playAudio(1.5)
+        // disable fastButton
+        fastButton.enabled = false
     }
     
     
     @IBAction func playHighAudio(sender: UIButton) {
+        enableAllButtons()
         // Play high pitch audio
         playAudioWithVariablePitch(1000)
+        // disable highButton
+        highButton.enabled = false
     }
     
     
     @IBAction func playLowAudio(sender: UIButton) {
+        enableAllButtons()
         // Play low pitch audio
         playAudioWithVariablePitch(-1000)
+        // disable lowButton
+        lowButton.enabled = false
     }
     
     
@@ -80,7 +110,10 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func stopAudio(sender: UIButton) {
+        enableAllButtons()
         stopAllAudio()
+        // disable stopButton
+        stopButton.enabled = false
     }
     
     func stopAllAudio(){

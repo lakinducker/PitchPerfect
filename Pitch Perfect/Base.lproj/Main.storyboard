@@ -32,9 +32,6 @@
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="19"/>
                                 <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="117" y="372" width="152" height="19"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jp-CK-pTF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -62,12 +59,12 @@
                                 <exclude reference="4jp-CK-pTF"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2Z2-51-zm0"/>
-                                <exclude reference="tYp-Zq-8m7"/>
+                                <exclude reference="vAW-bm-oh4"/>
                                 <exclude reference="7ea-SI-Ytl"/>
                                 <exclude reference="ZVX-zh-Vhq"/>
                                 <exclude reference="37b-PZ-9rK"/>
-                                <exclude reference="vAW-bm-oh4"/>
+                                <exclude reference="2Z2-51-zm0"/>
+                                <exclude reference="tYp-Zq-8m7"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -77,12 +74,12 @@
                                 <include reference="4jp-CK-pTF"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2Z2-51-zm0"/>
-                                <include reference="tYp-Zq-8m7"/>
+                                <include reference="vAW-bm-oh4"/>
                                 <include reference="7ea-SI-Ytl"/>
                                 <include reference="ZVX-zh-Vhq"/>
                                 <include reference="37b-PZ-9rK"/>
-                                <include reference="vAW-bm-oh4"/>
+                                <include reference="2Z2-51-zm0"/>
+                                <include reference="tYp-Zq-8m7"/>
                             </mask>
                         </variation>
                     </view>
@@ -128,7 +125,7 @@
                                     <action selector="playFastAudio:" destination="Ux7-P1-B1l" eventType="touchUpInside" id="IaC-SK-fnS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JM-5D-drM">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JM-5D-drM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -215,6 +212,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="fastButton" destination="lzp-33-yOe" id="YOF-fN-hlV"/>
+                        <outlet property="highButton" destination="SQq-gp-nfQ" id="qDH-zN-BFl"/>
+                        <outlet property="lowButton" destination="GD7-dj-wYH" id="Mcq-ID-pm4"/>
+                        <outlet property="slowButton" destination="sat-K6-vTl" id="6lx-qO-ogS"/>
+                        <outlet property="stopButton" destination="2JM-5D-drM" id="ycz-mI-88z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NC4-We-WNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
